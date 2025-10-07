@@ -1,15 +1,13 @@
-./__pycache__/*
+**/__pycache__/**
 
-./calibration_tool_venv/*
+calibration_tool_venv/*
 
-./config/*
+config/*
 
-./data/*
+data/*
 
-./videos/*
+videos/*
 
-./output_test.avi
+output_test.avi
 
-./setup.sh
-
-./utils/__pycache__/*
+setup.sh
