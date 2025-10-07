@@ -5,15 +5,46 @@ This tool was developed to perform **intrinsic** and **extrinsic** calibration b
 ---
 
 ## Table of Contents
-1. [Explanation of intrinsic and extrinsic matrices](#explanation-of-intrinsic-and-extrinsic-matrices)
-2. [Get Started](#get-started)
+1. [Get Started](#get-started)
    - [Prerequisites](#prerequisites)
    - [Installation](#installation)
+2. [Explanation of intrinsic and extrinsic matrices](#explanation-of-intrinsic-and-extrinsic-matrices)
 3. [Usage](#usage)
-   - [Node Overview](#node-overview)
-   - [Workflow](#workflow)
-   - [Running Nodes](#running-nodes)
+   - [Calibration Tool Overview](#calibration-tool-overview)
+   - [Preliminary steps](#preliminary-steps)
+   - [General configuration](#general-configuration)
+   - [Running the tools](#running-the-tools)
+   - [Intrinsic calibration](#intrinsic-calibration)
+   - [Extrinsic calibration](#extrinsic-calibration)
 
+---
+
+
+## Get Started
+
+### Prerequisites
+
+To run this package, ensure the following dependencies are installed:
+- **Git**: to download the repository and to download new updates.
+- **Python 3.10**: Python version with which the tool was tested
+- **Ubuntu 22.04**
+
+### Installation
+
+#### Clone the Repository
+Start by cloning the repository:
+```bash
+git clone https://github.com/ddp22/Calibration_tool.git
+```
+
+#### Python virtual environment
+Before you start, create the python virtual environment and install all the necessary modules:
+```bash
+cd Calibration_tool
+python3 -m venv calibration_tool_venv
+source ./calibration_tool_venv/bin/activate
+python3 -m pip install -r requirements.txt
+```
 
 ---
 
@@ -89,34 +120,6 @@ R & t\\
 
 ---
 
-## Get Started
-
-### Prerequisites
-
-To run this package, ensure the following dependencies are installed:
-- **Git**: to download the repository and to download new updates.
-- **Python 3.10**: Python version with which the tool was tested
-- **Ubuntu 22.04**
-
-### Installation
-
-#### Clone the Repository
-Start by cloning the repository:
-```bash
-git clone https://github.com/ddp22/Calibration_tool.git
-```
-
-#### Python virtual environment
-Before you start, create the python virtual environment and install all the necessary modules:
-```bash
-cd Calibration_tool
-python3 -m venv calibration_tool_venv
-source ./calibration_tool_venv/bin/activate
-python3 -m pip install -r requirements.txt
-```
-
----
-
 
 ## Usage
 
@@ -154,6 +157,17 @@ chessboard:
   square_size_meters: 0.43 # size of the chessboard squares in meters
 ```
 
+### Running the tools
+
+To run the tools for performing intrinsic and extrinsic calibration, run the following commands:
+
+```bash
+cd Calibration_tool
+source ./calibration_tool_venv/bin/activate
+python3 main.py
+```
+
+Your calibration begins here. You'll need to perform the [intrinsic calibration](#intrinsic-calibration) first, then the [extrinsic calibration](#extrinsic-calibration), where you'll find the next steps.
 
 ### Intrinsic calibration
 

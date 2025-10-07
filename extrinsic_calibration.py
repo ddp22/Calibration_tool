@@ -42,7 +42,6 @@ class ExtrinsicCameraCalibrationExtractor:
         self._extra_space_for_buttons = 80
         self._default_pad_x = 20
         self._window_size = (self._image_label_size[0], self._image_label_size[1] + 2 * self._extra_space_for_buttons)  # extra space for buttons
-        print(f"Window size: {self._window_size}")
         self._window.resize(*self._window_size)
         self._window.setFixedSize(*self._window_size)
         self._window.show()
